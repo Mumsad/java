@@ -1,0 +1,93 @@
+Q3.A- Write a Java program to find sum of
+array elements of size 10.
+public class sumOfArray {
+public static void main(String[] args) {
+int[] arr = { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 }; // initialize the array with
+elements
+int sum = 0; // initialize the sum variable to 0
+// loop through the array and add each element to the sum
+for (int i = 0; i < arr.length; i++) {
+sum += arr[i];
+}
+System.out.println("The sum of the array elements is: " + sum);
+}
+}
+
+
+Q3.B- Designed a class SortData that
+contains the method asec() and desc() to sort
+array elements.
+import java.util.*;
+class SortData {
+public void asec(int[] arr) {
+// sort the array in ascending order using a bubble sort algorithm
+for (int i = 0; i < arr.length - 1; i++) {
+for (int j = 0; j < arr.length - i - 1; j++) {
+if (arr[j] > arr[j + 1]) {
+// swap arr[j] and arr[j+1]
+int temp = arr[j];
+arr[j] = arr[j + 1];
+arr[j + 1] = temp;
+}
+}
+}
+} public void desc(int[] arr) {
+// sort the array in descending order using a bubble sort algorithm
+for (int i = 0; i < arr.length - 1; i++) {
+for (int j = 0; j < arr.length - i - 1; j++) {
+if (arr[j] < arr[j + 1]) {
+// swap arr[j] and arr[j+1]
+int temp = arr[j];
+arr[j] = arr[j + 1];
+arr[j + 1] = temp;
+}
+}
+}
+}
+}
+public class SortData1 {
+public static void main(String[] args) {
+int[] arr = { 3, 2, 1, 5, 4 };
+SortData sorter = new SortData();
+System.out.println("Given array is :- { 3, 2, 1, 5, 4 }");
+// sort the array in ascending order
+sorter.asec(arr);
+// print the sorted array
+System.out.print("Sorted array in ascending :- ");
+for (int i = 0; i < arr.length; i++) {
+System.out.print(arr[i] + " ");
+}
+System.out.println();
+// sort the array in descending order
+sorter.desc(arr);
+// print the sorted array
+System.out.print("Sorted array in descending :- ");
+for (int i = 0; i < arr.length; i++) {
+System.out.print(arr[i] + " ");
+}
+System.out.println();
+}
+}
+
+
+Q3.C- Find the smallest and largest element
+from the array
+public class largeElement {
+public static void main(String[] args) {
+int[] arr = { 3, 2, 1, 5, 4 };
+int min = arr[0];
+int max = arr[0];
+System.out.println("Given array is :- {3, 2, 1, 5, 4};");
+// iterate over the array, updating min and max as needed
+for (int i = 1; i < arr.length; i++) {
+if (arr[i] < min) {
+min = arr[i];
+}
+if (arr[i] > max) {
+max = arr[i];
+}
+}
+System.out.println("Minimum element: " + min);
+System.out.println("Maximum element: " + max);
+}
+}
