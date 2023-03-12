@@ -1,0 +1,79 @@
+Q4.A- Designed a Box class to find volume of
+a Box using class method.
+class Box {
+private double length;
+private double width;
+private double height;
+public Box(double length, double width, double height) {
+this.length = length;
+this.width = width;
+this.height = height;
+}
+public double getVolume() {
+return length * width * height;
+}
+}
+public class volumeOfBox {
+public static void main(String[] args) {
+Box myBox = new Box(2.0, 3.0, 4.0);
+double volume = myBox.getVolume();
+System.out.println("The volume of the box is " + volume);
+}
+}
+
+Q4.B- Designed a Box class, initialize object using
+constructor and find volume of a box
+class Box {
+ private double length;
+ private double width;
+ private double height;
+ public Box(double length, double width, double height) {
+ this.length = length;
+ this.width = width;
+ this.height = height;
+ }
+ public double getVolume() {
+ return length * width * height;
+ }
+}
+public class volumeConstructor {
+ public static void main(String[] args) {
+ Box myBox = new Box(2.0, 3.0, 4.0);
+ double volume = myBox.getVolume();
+ System.out.println("The volume of the box is " + volume);
+ }
+}
+
+
+Q4.C- Designed a Box class with multiple
+constructor to initialize class object and find
+volume of a box
+class Box {
+ private double length;
+ private double width;
+ private double height;
+ public Box(double length, double width, double height) {
+ this.length = length;
+ this.width = width;
+ this.height = height;
+ }
+ public Box(double side) {
+ this.length = side;
+ this.width = side;
+ this.height = side;
+ }
+ public double getVolume() {
+ return length * width * height;
+ }
+}
+public class multiConstructor {
+ public static void main(String[] args) {
+ Box myBox1 = new Box(2.0, 3.0, 4.0);
+ double volume1 = myBox1.getVolume();
+ System.out.println("The volume of the first box is " + volume1);
+ Box myBox2 = new Box(2.0);
+ double volume2 = myBox2.getVolume();
+ System.out.println("The volume of the second box is " +
+volume2);
+ }
+}
